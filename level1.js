@@ -19,6 +19,7 @@ var brickOffsetTop = 5;
 var brickOffsetLeft = 370;
 var bricks = [];
 var score = 0;
+var id;
 
 for(var c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
@@ -118,6 +119,7 @@ function draw() {
         else {
             alert("遊戲結束。");
             document.location.reload();
+            cancelAnimationFrame(id);
         }
     }
     if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
@@ -126,7 +128,7 @@ function draw() {
     
     x += dx;
     y += dy;
-    requestAnimationFrame(draw);
+    id = requestAnimationFrame(draw);
 }
 document.addEventListener("mousemove", mouseMoveHandler, false);
 draw();
