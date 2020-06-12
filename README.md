@@ -1,5 +1,5 @@
-# pingponggame
-## introduction
+# Ping Pong Game
+## Introduction
 This is the ping pong game created for Da Hua Elementary School.
 Have fun playing it!
 ## Author information
