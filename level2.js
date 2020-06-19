@@ -10,7 +10,7 @@ var dy = -r * Math.sin(theta);
 var paddleHeight = 100;
 var paddleWidth = 12;
 var paddleY = (canvas.height-paddleHeight)/2;
-var brickRowCount = 10;
+var brickRowCount = 9;
 var brickColumnCount = 4;
 var brickWidth = 25;
 var brickHeight = 60;
@@ -19,18 +19,27 @@ var brickOffsetTop = 5;
 var brickOffsetLeft = 370;
 var bricks = [];
 var score = 0;
+var shape = [[1, 0, 0, 1],
+             [1, 1, 1, 1],
+             [0, 1, 1, 0],
+             [1, 1, 1, 1],
+             [0, 1, 1, 0],
+             [0, 1, 1, 0],
+             [1, 0, 0, 1],
+             [1, 0, 0, 1],
+             [1, 0, 0, 1]];
 
 for(var c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
     for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = {x: 0, y: 0, visible: 1};
+        bricks[c][r] = {x: 0, y: 0, visible: shape[r][c]};
     }
 }
 
 function mouseMoveHandler(e) {
     var relativeY = e.clientY - canvas.offsetTop;
-    if(relativeY > paddleHeight && relativeY < canvas.height) {
-        paddleY = relativeY - paddleHeight;
+    if(relativeY > paddleHeight / 2 && relativeY < canvas.height - paddleHeight / 2) {
+        paddleY = relativeY - paddleHeight / 2;
     }
 }
 
@@ -116,7 +125,7 @@ function draw() {
             dx = -dx;
         }
         else {
-            alert("遊戲結束。");
+            console.log("遊戲結束。");
             document.location.reload();
         }
     }
