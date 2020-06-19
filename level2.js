@@ -19,20 +19,11 @@ var brickOffsetTop = 5;
 var brickOffsetLeft = 370;
 var bricks = [];
 var score = 0;
-var shape = [[1, 0, 0, 1],
-             [1, 1, 1, 1],
-             [0, 1, 1, 0],
-             [1, 1, 1, 1],
-             [0, 1, 1, 0],
-             [0, 1, 1, 0],
-             [1, 0, 0, 1],
-             [1, 0, 0, 1],
-             [1, 0, 0, 1]];
 
 for(var c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
     for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = {x: 0, y: 0, visible: shape[c][r]};
+        bricks[c][r] = {x: 0, y: 0, visible: 1};
     }
 }
 
