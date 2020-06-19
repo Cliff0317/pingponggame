@@ -12,6 +12,18 @@ var paddleWidth = 12;
 var paddleY = (canvas.height-paddleHeight)/2;
 var brickRowCount = 10;
 var brickColumnCount = 4;
+var matrix = [
+    [1,1,1,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,0,0,1],
+    [1,1,1,1]
+];
 var brickWidth = 25;
 var brickHeight = 60;
 var brickPadding = 6;
@@ -23,7 +35,7 @@ var score = 0;
 for(var c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
     for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = {x: 0, y: 0, visible: 1};
+        bricks[c][r] = {x: 0, y: 0, visible: matrix[c}[r]};
     }
 }
 
