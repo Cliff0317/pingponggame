@@ -10,11 +10,10 @@ var dy = -r * Math.sin(theta);
 var paddleHeight = 100;
 var paddleWidth = 12;
 var paddleY = (canvas.height-paddleHeight)/2;
-var brickRowCount = 10;
+var brickRowCount = 9;
 var brickColumnCount = 4;
 var matrix = [
     [1,1,1,1],
-    [1,0,0,1],
     [1,0,0,1],
     [1,0,0,1],
     [1,0,0,1],
