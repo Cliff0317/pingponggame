@@ -128,7 +128,7 @@ function draw() {
             dx = -dx;
         }
         else {
-            alert("遊戲結束。");
+            console.log("遊戲結束。");
             document.location.reload();
         }
     }
