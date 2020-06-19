@@ -35,7 +35,7 @@ var score = 0;
 for(var c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
     for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = {x: 0, y: 0, visible: matrix[c}[r]};
+        bricks[c][r] = {x: 0, y: 0, visible: matrix[c][r]};
     }
 }
 
