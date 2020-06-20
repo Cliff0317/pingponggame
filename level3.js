@@ -48,11 +48,6 @@ function collisionDetection() {
                     b.visible = 0;
                     score += c+1;
                     drawScore();
-                    if(score >= 100) {
-                        alert("恭喜，您贏了！\ n分數：" + score);
-                        draw();
-                        document.location.href.replace("level1", "level2")
-                    }
                 }
             }
         }
