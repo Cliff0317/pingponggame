@@ -29,8 +29,8 @@ for(var c = 0; c < brickColumnCount; c++) {
 
 function mouseMoveHandler(e) {
     var relativeY = e.clientY - canvas.offsetTop;
-    if(relativeY > paddleHeight && relativeY < canvas.height) {
-        paddleY = relativeY - paddleHeight;
+    if(relativeY > paddleHeight / 2 && relativeY < canvas.height / 2) {
+        paddleY = relativeY - paddleHeight / 2;
     }
 }
 
@@ -116,7 +116,6 @@ function draw() {
             dx = -dx;
         }
         else {
-            alert("遊戲結束。");
             document.location.reload();
         }
     }
