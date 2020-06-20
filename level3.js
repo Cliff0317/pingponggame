@@ -29,7 +29,7 @@ for(var c = 0; c < brickColumnCount; c++) {
 
 function mouseMoveHandler(e) {
     var relativeY = e.clientY - canvas.offsetTop;
-    if(relativeY > paddleHeight / 2 && relativeY < canvas.height / 2) {
+    if(relativeY > paddleHeight / 2 && relativeY < canvas.height - paddleHeight / 2) {
         paddleY = relativeY - paddleHeight / 2;
     }
 }
