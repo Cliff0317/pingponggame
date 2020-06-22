@@ -1,8 +1,9 @@
+console.log('v0.2');
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var ballRadius = 12;
 var x = ballRadius;
-var y = Math.random() * (canvas.height - 2*ballRadius) + ballRadius;;
+var y = Math.random() * (canvas.height - 2*ballRadius) + ballRadius;
 var r = 6;
 var theta = Math.random() * 1/2 * Math.PI;
 var dx = r * Math.cos(theta);
